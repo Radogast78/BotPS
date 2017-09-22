@@ -62,7 +62,14 @@ namespace BotPS
 
         private void button2_Click(object sender, EventArgs e)
         {
+            String result=sendPost("http://elem.mobi", "plogin=" + this.textBox2.Text + "&ppass=" + this.textBox3.Text);
+            this.richTextBox1.Text = result;
+        }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            String result = sendGet(this.textBox1.Text, "");
+            this.richTextBox1.Text = result;
         }
     }
 }
