@@ -70,6 +70,7 @@ namespace BotPS
         {
             String result = sendGet(this.textBox1.Text, "");
             this.richTextBox1.Text = result;
+
         }
     }
 }
