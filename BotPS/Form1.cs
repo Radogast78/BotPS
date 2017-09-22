@@ -8,6 +8,7 @@ using System.Linq;
 using System.Net;
 using System.Text;
 using System.Threading.Tasks;
+using HtmlAgilityPack;
 using System.Windows.Forms;
 
 namespace BotPS
@@ -63,7 +64,12 @@ namespace BotPS
         private void button2_Click(object sender, EventArgs e)
         {
             String result=sendPost("http://elem.mobi", "plogin=" + this.textBox2.Text + "&ppass=" + this.textBox3.Text);
-            this.richTextBox1.Text = result;
+            HtmlAgilityPack.HtmlDocument page = new HtmlAgilityPack.HtmlDocument();
+            page.LoadHtml(result);
+            //< div class="ml5 mr3 pt2">
+            String stats=page.DocumentNode.SelectNodes("//div[@class=\"ml5 mr3 pt2\"]")[1].InnerHtml;
+
+            this.richTextBox1.Text = stats;
         }
 
         private void button1_Click(object sender, EventArgs e)
