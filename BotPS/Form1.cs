@@ -21,6 +21,15 @@ namespace BotPS
             this.cookies = new CookieContainer();
             InitializeComponent();
         }
+        public void ErrorLog(String userName,Exception e,String page)
+        {
+            using (StreamWriter sw = new StreamWriter(@"D:\" + userName + ".log", false, System.Text.Encoding.Default))
+            {
+                sw.WriteLine(e);
+                sw.WriteLine(page);
+            }
+
+        }
         public String sendPost(String url, String post)
         {
             String result = "";
@@ -63,13 +72,36 @@ namespace BotPS
 
         private void button2_Click(object sender, EventArgs e)
         {
-            String result=sendPost("http://elem.mobi", "plogin=" + this.textBox2.Text + "&ppass=" + this.textBox3.Text);
-            HtmlAgilityPack.HtmlDocument page = new HtmlAgilityPack.HtmlDocument();
-            page.LoadHtml(result);
-            //< div class="ml5 mr3 pt2">
-            String stats=page.DocumentNode.SelectNodes("//div[@class=\"ml5 mr3 pt2\"]")[1].InnerHtml;
+            HtmlAgilityPack.HtmlDocument page=new HtmlAgilityPack.HtmlDocument(); ;
+            try
+            {
 
-            this.richTextBox1.Text = stats;
+                String result = sendPost("http://elem.mobi", "plogin=" + this.textBox2.Text + "&ppass=" + this.textBox3.Text);
+                page.LoadHtml(result);
+                //< div class="ml5 mr3 pt2"> Получаем блок статистики
+                String login = page.DocumentNode.SelectNodes("//div[@class=\"wr7\"]")[0].InnerText;
+                MessageBox.Show(login);
+                String allStats = page.DocumentNode.SelectNodes("//div[@class=\"ml5 mr3 pt2\"]")[0].InnerHtml;
+                /*        < span class="fr"><img src = "/img/ico16-silver.png" width="16" height="16" alt="">
+                 *        <span class="c_silver">10.49M</span> <img src = "/img/ico16-gold.png" width="16" height="16" alt="">
+                 *        <span class="c_gold">1176</span></span>
+                 *        <img src = "/img/ico16-sword-white.png" width="16" height="16" alt="">
+                 *        <span class="c_da">51 284</span>*/
+                HtmlAgilityPack.HtmlDocument stats = new HtmlAgilityPack.HtmlDocument();
+                stats.LoadHtml(allStats);
+                String silver = stats.DocumentNode.SelectNodes("//span[@class=\"c_silver\"]")[0].InnerText;
+                String gold = stats.DocumentNode.SelectNodes("//span[@class=\"c_gold\"]")[0].InnerText;
+                String strength = stats.DocumentNode.SelectNodes("//span[@class=\"c_da\"]")[0].InnerText;
+                this.label1.Text = "Серебро: "+silver;
+                this.label2.Text = "Золото: "+gold;
+                this.label3.Text = "Сила колоды: "+strength;
+                String profile = sendGet("http://elem.mobi/profile/", "");
+                this.richTextBox1.Text = result;
+            }
+            catch(Exception ex)
+            {
+                this.ErrorLog(this.textBox2.Text, ex, page.DocumentNode.InnerHtml);
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)

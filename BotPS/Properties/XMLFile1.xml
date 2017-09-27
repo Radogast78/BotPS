@@ -1,0 +1,275 @@
+﻿<html xmlns="http://www.w3.org/1999/xhtml" xmlns:w="http://wicket.apache.org/dtds.data/wicket-xhtml1.4-strict.dtd">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="author" content="Overmobile" />
+    <meta name="keywords" content="повелители стихий, магические карты, overmobile, овермобайл, онлайн игра, пвп, сражения, pvp, приключения, прокачка героя, коллекционная, карточная, подземелья, бесплатная, mmorpg" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1" />
+    <meta name="google" value="notranslate" />
+    <meta name="format-detection" content="telephone=no" />
+    <link rel="icon" href="/img/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon" />
+    <title>Повелители стихий | Онлайн-игра</title>
+    <link rel="stylesheet" type="text/css" href="/style/style.css?v=1.44" />
+    <link rel="stylesheet" type="text/css" href="/style/cards.css?v=4.22" />
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/img/iimg/elem-144x144.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/img/iimg/elem-114x114.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/img/iimg/elem-72x72.png" />
+    <link rel="apple-touch-icon-precomposed" href="/img/iimg/elem-57x57.png" />
+  </head>
+  <body id="gameBody">
+    <div class="mt1 small"  onclick="location.href='/'">
+      <img class="fl" src="/cards/fire/fire_knight_1_100.jpg" width="25" height="25" alt="">
+        <div class="ml5 mr3 pt2">
+          <span class="fr">
+            <img src="/img/ico16-diamond.png" width="16" height="16" alt="">
+              <span class="c_energy">1174</span>
+              <img src="/img/ico16-silver.png" width="16" height="16" alt=""/>
+              <span class="c_silver">10.49M</span>
+              <img src="/img/ico16-gold.png" width="16" height="16" alt="">
+                <span class="c_gold">1176</span>
+          </span>
+          <img src="/img/ico16-sword-white.png" width="16" height="16" alt="">
+            <span class="c_da">
+              51 284
+            </span>
+        </div>
+        <div class="ml27 mt4 prg">
+          <div class="rate" style="width:95%;"></div>
+        </div>
+        <div class="clb"></div>
+      </div>
+    <!--div class="msg red mt5"><div class="wr1"><div class="wr2"><div class="wr3"><div class="wr4"><div class="wr5"><div class="wr6"><div class="wr7">
+			Внимание! В 14:15 перезагрузка сервера. Просьба к этому времени завершить дуэли, арены, рейды и воздержаться от покупок золота.
+		</div></div></div></div></div></div></div></div-->
+    <div class="msg green mt10 mb10">
+      <div class="wr1">
+        <div class="wr2">
+          <div class="wr3">
+            <div class="wr4">
+              <div class="wr5">
+                <div class="wr6">
+                  <div class="wr7 c_dgreen left">
+                    <a href="/guild/">
+                      <img src="/img/gs/shield-water-3.png" width="36" height="42" class="fl mr10" alt="">
+                    </a>
+                    Мяука: <span class="c_lgreen4">А чо так кисло ключи берем?</span><br />
+                    <div class="mt10">
+                      <span class="c_dblue fl">18 ч назад</span>
+                      <span class="fr">
+                        <a href="/guild/notice/close/" class="c_dblue">Скрыть</a>
+                      </span>
+                    </div>
+                    <br clear="all" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="fttl green mt5 mb10">
+      <div class="lf">
+        <div class="rt">Ваш профиль</div>
+      </div>
+    </div>
+    <div class="brd fl mr8 ml5 mb5">
+      <a href="/settings/avatar/">
+        <img src="/cards/fire/fire_knight_1_100.jpg" width="50" height="50" alt="">
+		</a>
+    </div>
+    <span class="c_da">Ubez</span>
+    <span class="c_99">[78]</span>
+    <img src="/img/ico16-gndr-m.png" width="16" height="16" alt="">
+      <br/>
+      <!--div class="c_da nwr small mt5 mb5">&nbsp;</div-->
+      <span class="pt2 small">
+        <span class="fl c_fe">Маршал</span>
+        <a href="/guild/108/" class="c_orange fl">
+          <img alt="" class="mr5 fl mlr5" border="0" height="21" width="18" src="/img/gs/shield-water-3.png">Дальний Восток
+        </a>
+        <br/>
+      </span>
+      <div class="clb"></div>
+      <div class="bbtn mt10">
+        <a href="/msgs/" class="lf">
+          <span class="rt">
+            <span class="lbl mail">Моя почта</span>
+          </span>
+        </a>
+      </div>
+      <div class="bbtn">
+        <a href="/gifts/" class="lf">
+          <span class="rt">
+            <span class="lbl presents">
+              <span class="fr">
+                <span class="c_dblue">139 шт.</span>
+              </span>Подарки
+            </span>
+          </span>
+        </a>
+      </div>
+      <div class="bbtn">
+        <a href="/records/" class="lf">
+          <span class="rt">
+            <span class="lbl achiev">Ваши рекорды</span>
+          </span>
+        </a>
+      </div>
+      <div class="chains2">
+        <img src="/img/chains-l.png" class="fl" alt="">
+          <img src="/img/chains-r.png" class="fr" alt="">
+      </div>
+      <div class="bbtn">
+        <a href="/deck/" class="lf">
+          <span class="rt">
+            <span class="lbl deck">
+              <span class="fr">
+                <img class="vt" src="/img/bbtn-green-light.png" width="20" height="20" alt="">
+              </span>Боевая колода
+            </span>
+          </span>
+        </a>
+      </div>
+      <div class="bbtn">
+        <a href="/weakcards/" class="lf">
+          <span class="rt">
+            <span class="lbl weakcards">Слабые карты</span>
+          </span>
+        </a>
+      </div>
+      <div class="chains2">
+        <img src="/img/chains-l.png" class="fl" alt="">
+          <img src="/img/chains-r.png" class="fr" alt="">
+      </div>
+      <div class="bbtn">
+        <a href="/dailyreward/view/" class="lf">
+          <span class="rt">
+            <span class="lbl dailyreward">Календарь наград</span>
+          </span>
+        </a>
+      </div>
+      <div class="bbtn">
+        <a href="/settings/" class="lf">
+          <span class="rt">
+            <span class="lbl psettings">Настройки</span>
+          </span>
+        </a>
+      </div>
+      <div class="spr mt20">
+        <div class="lf">
+          <div class="rt"></div>
+        </div>
+      </div>
+      <div class="cntr c_dblue lh16 mt-9">
+        <span class="inbl bg_black plr5">Статистика боев</span>
+      </div>
+      <div class="small c_99 mt10 ml8">
+        <a href="/ratings/duel/" class="c_lblue">Рейтинг дуэлей</a>: <img src="/img/lg/lg-master-1-pve.png" width="16" height="16" alt="">
+          <span class="c_da">4308</span><br/>
+          Побед в дуэлях: <span class="c_da">19 305</span>
+        </div>
+      <div class="small c_99 mt5 ml8">
+        <a href="/ratings/arena/" class="c_lblue">Рейтинг арены</a>: <img src="/img/lg/lg-master-3-pvp.png" width="16" height="16" alt="">
+          <span class="c_da">3866</span><br/>
+          Побед на арене: <span class="c_da">384</span>
+        </div>
+      <div class="small c_99 mt5 ml8">
+        <a href="/ratings/tournament/" class="c_lblue">Рейтинг турниров</a>: <img src="/img/lg/lg-orange-tour.png" width="16" height="16" alt="">
+          <span class="c_da">2998</span>
+        </div>
+      <div class="spr mt20">
+        <div class="lf">
+          <div class="rt"></div>
+        </div>
+      </div>
+      <div class="cntr c_dblue lh16 mt-9">
+        <span class="inbl bg_black plr5">Используются бонусы</span>
+      </div>
+      <div class="small c_da mt10 ml8">
+        <img src="/img/gs/shield-water-3-sm.png" width="12" height="14" class="mb1 mlr2" alt="">
+          Бонусы гильдии: <span class="c_99">
+            <img src="/img/ico16-exp.png" width="16" height="16" alt="">
+              +53% <img src="/img/ico16-silver.png" width="16" height="16" alt="">+53% </span><br>
+            <div class="mt5"></div>
+          </div>
+      <div class="spr mt20">
+        <div class="lf">
+          <div class="rt"></div>
+        </div>
+      </div>
+      <div class="cntr c_dblue lh16 mt-9">
+        <span class="inbl bg_black plr5">Активность</span>
+      </div>
+      <div class="small c_99 mt10 ml8 lh16">
+        <img src="/img/gifts/pr-oneyear-06.png" width="50" height="50" class="mr5 fl mb10 mt2" alt="">
+          <span class="c_orange">Ветеран игры</span>
+          <br>
+            Опыт на 78 ур.:<span class="nwr">
+              <img src="/img/ico16-exp.png" width="16" height="16" alt="">
+                <span class="c_da">248 286 130</span> (95%)
+            </span><br>
+              Дней в игре: <span class="c_da">460</span><br>
+		Последний заход сегодня в 07:54
+	
+      </div>
+      <div class="mt10"></div>
+      <div class="bmenu mt10">
+        <span class="slot notify" style="width: 32% !important">
+          <a href="/">
+            <img src="/img/ico-bmenu-main.png?v=2" width="50" height="50" alt="">
+              <br/>
+              <span class="lbl">Главная</span>
+            </a>
+        </span>
+        <span class="slot select" style="width: 32% !important">
+          <a href="/profile/">
+            <img src="/img/ico-bmenu-profile.png?v=2" width="50" height="50" alt="">
+              <br/>
+              <span class="lbl">Профиль</span>
+            </a>
+        </span>
+        <span class="slot notify" style="width: 32% !important">
+          <a href="/guild/">
+            <img src="/img/ico-bmenu-clan.png?v=2" width="50" height="50" alt="">
+              <br/>
+              <span class="lbl">Гильдия</span>
+            </a>
+        </span>
+      </div>
+      <div class="arr mt5">
+        <div class="ae">
+          <div class="ac"></div>
+        </div>
+      </div>
+      <div class="cntr mt5">
+        <a href="/forum/" class="c_lblue">Форум</a>
+        <img src="/img/ico16-separator.png" height="16" width="16" alt=""/>
+        <a href="/chat/" class="c_lblue">Чат</a>
+        <img src="/img/ico16-separator.png" height="16" width="16" alt=""/>
+        <a href="/news/" class="c_lblue">Новости</a>
+      </div>
+      <div class="arr mt5">
+        <div class="ae">
+          <div class="ac"></div>
+        </div>
+      </div>
+      <div class="cntr small c_66 mt5 mb10">
+        <a href="/about/" class="c_66">Об игре</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+        <a href="/online/" class="c_dblue">Онлайн: 7925</a>
+        &nbsp;&nbsp;|&nbsp;&nbsp;<a href="/exit/" class="c_66">Выход</a><br/>
+        <div class="mt10">
+          <a href="/agreement/" class="c_66">Соглашение</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="/support/" class="c_dblue">Служба&nbsp;поддержки</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="/rules/" class="c_66">Правила</a>
+        </div><div class="mt10">
+          <br/>
+          <a href="/privacy/" class="c_66">Политика конфиденциальности</a>
+        </div>
+      </div>
+      <div class="cntr small c_66 mt5 mb20">
+        0.218 сек, <span id="server_time">07:54:59</span><br/>
+        &laquo;Повелители стихий&raquo; &copy; Overmobile 2014-2017, 16+<br/>
+        <a href="http://aoka.su/android/ru//?channelId=719" class="c_66">Другие наши игры</a>
+      </div>
+
+    </body>
+</html>
