@@ -79,24 +79,46 @@ namespace BotPS
                 String result = sendPost("http://elem.mobi", "plogin=" + this.textBox2.Text + "&ppass=" + this.textBox3.Text);
                 page.LoadHtml(result);
                 //< div class="ml5 mr3 pt2"> Получаем блок статистики
-                String login = page.DocumentNode.SelectNodes("//div[@class=\"wr7\"]")[0].InnerText;
-                MessageBox.Show(login);
-                String allStats = page.DocumentNode.SelectNodes("//div[@class=\"ml5 mr3 pt2\"]")[0].InnerHtml;
+                //String login = page.DocumentNode.SelectNodes("//div[@class=\"wr7\"]")[0].InnerText;
+                //MessageBox.Show(login);
+                //String allStats = page.DocumentNode.SelectNodes("//div[@class=\"ml5 mr3 pt2\"]")[0].InnerHtml;
                 /*        < span class="fr"><img src = "/img/ico16-silver.png" width="16" height="16" alt="">
                  *        <span class="c_silver">10.49M</span> <img src = "/img/ico16-gold.png" width="16" height="16" alt="">
                  *        <span class="c_gold">1176</span></span>
                  *        <img src = "/img/ico16-sword-white.png" width="16" height="16" alt="">
                  *        <span class="c_da">51 284</span>*/
+                //HtmlAgilityPack.HtmlDocument stats = new HtmlAgilityPack.HtmlDocument();
+                //stats.LoadHtml(allStats);
+                //String silver = stats.DocumentNode.SelectNodes("//span[@class=\"c_silver\"]")[0].InnerText;
+                //String gold = stats.DocumentNode.SelectNodes("//span[@class=\"c_gold\"]")[0].InnerText;
+                //String strength = stats.DocumentNode.SelectNodes("//span[@class=\"c_da\"]")[0].InnerText;
+                //this.label1.Text = "Серебро: "+silver;
+                //this.label2.Text = "Золото: "+gold;
+                //this.label3.Text = "Сила колоды: "+strength;
+                String profilePage = sendGet("http://elem.mobi/profile/", "");
+                HtmlAgilityPack.HtmlDocument profile = new HtmlAgilityPack.HtmlDocument();
+                profile.LoadHtml(profilePage);//<div class="ml5 mr3 pt2">
+                String statistics= profile.DocumentNode.SelectNodes("//div[@class=\"ml5 mr3 pt2\"]")[0].InnerHtml;
                 HtmlAgilityPack.HtmlDocument stats = new HtmlAgilityPack.HtmlDocument();
-                stats.LoadHtml(allStats);
-                String silver = stats.DocumentNode.SelectNodes("//span[@class=\"c_silver\"]")[0].InnerText;
+                stats.LoadHtml(statistics);
+                String diamond = stats.DocumentNode.SelectNodes("//span[@class=\"c_energy\"]")[0].InnerText;
+                String silver= stats.DocumentNode.SelectNodes("//span[@class=\"c_silver\"]")[0].InnerText;
                 String gold = stats.DocumentNode.SelectNodes("//span[@class=\"c_gold\"]")[0].InnerText;
                 String strength = stats.DocumentNode.SelectNodes("//span[@class=\"c_da\"]")[0].InnerText;
-                this.label1.Text = "Серебро: "+silver;
-                this.label2.Text = "Золото: "+gold;
-                this.label3.Text = "Сила колоды: "+strength;
-                String profile = sendGet("http://elem.mobi/profile/", "");
-                this.richTextBox1.Text = result;
+
+                this.label1.Text = "Алмазы: "+diamond;
+                this.label2.Text = "Серебро: "+silver;
+                this.label3.Text = "Золото: "+gold;
+                this.label6.Text = "Сила колоды: "+strength;
+
+                /*                int length = stats.DocumentNode.SelectNodes("//span[@class=\"c_da\"]").Count;
+                                String all = "";
+                                for(int i = 0; i < length; i++)
+                                {
+                                    all=all+stats.DocumentNode.SelectNodes("//span[@class=\"c_da\"]")[i].InnerText+"\n";
+                                }*/
+                //<span class="c_da">Ubez</span>
+                //this.richTextBox1.Text = all;
             }
             catch(Exception ex)
             {
